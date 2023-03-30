@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>第一刊景色分享 | 陈麓的小小小空间</title>
+        <meta name="author" content="ChenLu" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/chenlu.jpg" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/waline/2.14.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline-meta.min.css" />
+
+
+<script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存&ensp;浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <nav id="menu" ref="menu">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>陈麓的小小小空间</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;陈麓的小小小空间</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                <div class="article">
+    <div>
+        <h1>第一刊景色分享</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/test/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                test
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/test/" style="color: #ff7d73">test</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="景物分享第一刊"><a href="#景物分享第一刊" class="headerlink" title="景物分享第一刊"></a>景物分享第一刊</h1><blockquote>
+<p>总有你身旁的一处风景，让你为之停留驻足欣赏，直至日出日落，四季寥落，寂寞成歌;也总有你近处的一片云彩，为你绽放五彩的斑斓，初冬过后，是无休的泠冷，有云彩的地方，就伴着无尽的温暖。无论寒冬，或者腊月;无论风雨，或者霜雪;总有属于你的风景云彩，让你停留，为你绽放，最美的未来。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/a.jpg" alt="南昌局部俯瞰图">“由于没有像素高的航拍无人机，所以是在被人戏称的分手摩天轮上拍的，效果还可以”</p>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/c.jpg" alt="万寿宫">“拍摄于江西省省会南昌市的万寿宫景点，众多传统元素相互交融，是一个不错的去处”</p>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/b.jpg" alt="万寿宫门前">“拍摄于万寿宫门前，古老的建筑元素与网红创意元素出现在同一个画框，别有一番韵味”</p>
+<h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/d.jpg" alt="南昌中山路路口">“摄于南昌市中山路某商场路口，在等待倒计时的间隙记录的，后来被告知倒计时取消，地铁关闭，就随便去浪了”</p>
+<h2 id="五"><a href="#五" class="headerlink" title="五"></a>五</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/e.jpg" alt="德兴远郊">“摄于上饶德兴市远郊，当时正在河里摸鱼，感觉取景挺好就记录下来了。德兴远郊景色还是挺不错的。”</p>
+<h2 id="六"><a href="#六" class="headerlink" title="六"></a>六</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/f.jpg" alt="葛仙村">“拍摄于上饶市铅山县的葛仙村景点的一个瞭望楼上，瞭望全村，心境无比的辽阔”</p>
+<h2 id="七"><a href="#七" class="headerlink" title="七"></a>七</h2><p><img src="/2023/03/29/%E7%AC%AC%E4%B8%80%E5%88%8A%E6%99%AF%E8%89%B2%E5%88%86%E4%BA%AB/h.jpg" alt="摩天轮">“引申，我看来不能算风景，但是嘛来南昌肯定都知道它宣传是说亚洲最大的摩天轮，当地人戏称它为分手摩天轮，传说坐过此轮必定分手，哈哈哈哈”</p>
+<h2 id="eight"><a href="#eight" class="headerlink" title="eight"></a>eight</h2><h2 id="END"><a href="#END" class="headerlink" title="END~"></a>END~</h2>
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    
+    
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 陈麓的小小小空间
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;ChenLu
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            
+            
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "",
+        commentCount: true,
+        pageview: false,
+        emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+        meta: ["nick","mail","link"],
+        requiredMeta: ["nick"],
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        locale: {},
+    });
+</script>
+
+
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "",
+        region: "",
+        path: location.pathname,
+        lang: "zh-CN",
+    })
+</script>
+
+
+        
+    </body>
+</html>
