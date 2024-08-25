@@ -44,8 +44,6 @@
 
 
 
-<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
-
 
 
 <link rel="stylesheet" href="/css/main.css" />
@@ -178,11 +176,11 @@
     
     
     
-    
-    
     <div id="comment">
-        <div id="twikoo-container"></div>
+        <div id="giscus-container" class="giscus"></div>
     </div>
+    
+    
     
     
 </div>
@@ -217,18 +215,25 @@
     <script src="/js/main.js"></script>
     
     
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
 
 
 
-<script>
-    twikoo.init({
-        el: "#twikoo-container",
-        envId: "https://chenlu1120.github.io/",
-        region: "",
-        path: location.pathname,
-        lang: "",
-    })
-</script>
 
 
     
